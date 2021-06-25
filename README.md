@@ -2,7 +2,7 @@
 
 ## Terraform Script to deploy single node sonar qube on azure
 1. Instalar Prerequisitos con script JVM & postgresql
-1. Configuración Manual del PostgreSQL [Parte Manual]($parte-manual-1) 
+1. Configuración Manual del PostgreSQL [Parte Manual](#parte-manual-1) 
 1. Setup del sonar Qube con script
 1. Configuración del Sonarquebe [Parte Manual](#parte-manual-2)
 
