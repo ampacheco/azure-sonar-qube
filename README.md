@@ -2,9 +2,19 @@
 
 ## Terraform Script to deploy single node sonar qube on azure
 1. Instalar Prerequisitos con script JVM & postgresql
-1. Configuración Manual del PostgreSQL [Parte Manual](#parte-manual-1) 
-1. Setup del sonar Qube con script
-1. Configuración del Sonarquebe [Parte Manual](#parte-manual-2)
+````
+curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/setup.sh | sudo bash -
+````
+3. Configuración Manual del PostgreSQL [Parte Manual](#parte-manual-1) 
+4. Setup del sonar Qube con script
+````
+curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/setup.sh | sudo bash -
+````
+5. Configuración del Sonarquebe [Parte Manual](#parte-manual-2)
+1. Configurar Sonarqube script
+````
+curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/setup.sh | sudo bash -
+````
 
 ## Parte Manual 1
 
