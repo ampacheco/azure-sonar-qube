@@ -1,5 +1,13 @@
 # azure-sonar-qube
 
+## Provisionar azure Linux VM para Desplegar sonarqube y abrir puerto adecuado
+````
+vname=sonarqube
+az group create -n ${vname}-rg
+az vm create --name ${vname}-vm --resource-group ${vname}-rg --image UbuntuLTS --admin-username azureadmin
+az vm open-port --name ${vname}-vm --resource-group ${vname}-rg --port '9000'
+````
+
 ## Terraform Script to deploy single node sonar qube on azure
 1. Instalar Prerequisitos con script JVM & postgresql
 ````
