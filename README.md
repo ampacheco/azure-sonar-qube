@@ -5,7 +5,7 @@
 vname=sonarqube
 az group create -n ${vname}-rg
 az vm create --name ${vname}-vm --resource-group ${vname}-rg --image UbuntuLTS --admin-username azureadmin
-az vm open-port --name ${vname}-vm --resource-group ${vname}-rg --port '9000'
+az vm open-port --name ${vname}-vm --resource-group ${vname}-rg --port 9000
 ````
 
 ## Terraform Script to deploy single node sonar qube on azure
