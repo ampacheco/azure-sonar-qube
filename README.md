@@ -16,12 +16,12 @@ curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/se
 3. Configuración Manual del PostgreSQL [Parte Manual](#parte-manual-1) 
 4. Setup del sonar Qube con script
 ````
-curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/setup.sh | sudo bash -
+curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/setup-sq.sh |sudo bash -
 ````
 5. Configuración del Sonarquebe [Parte Manual](#parte-manual-2)
 1. Configurar Sonarqube script
 ````
-curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/setup.sh | sudo bash -
+curl -sLo - https://raw.githubusercontent.com/ampacheco/azure-sonar-qube/main/configure-sq.sh |sudo bash -
 ````
 
 ## Parte Manual 1
@@ -47,3 +47,17 @@ GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;
 ## Parte Manual 2
 Configuración del Arranque del Sonar
 
+Modificar sonar.properties
+````
+# Modify sonar.properties file
+cat << EOF | sudo tee -a /opt/sonarqube/conf/sonar.properties
+sonar.jdbc.username=sonar
+sonar.jdbc.password=password
+sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube
+# EOF
+````
+
+Especificar usuario
+sudo vi /opt/sonarqube/bin/linux-x86-64/sonar.sh
+# uncomment
+# RUN_AS_USER=sonar
